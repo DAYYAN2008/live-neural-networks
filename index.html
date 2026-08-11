@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Neural Digit Recognizer</title>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Neural Digit Recognizer</h1>
+            <p>Draw any single digit (0-9) in the box below and the CNN will predict it in real-time.</p>
+        </header>
+
+        <div class="canvas-container">
+            <!-- 280x280 is 10x the 28x28 MNIST resolution -->
+            <canvas id="canvas" width="280" height="280"></canvas>
+        </div>
+
+        <div class="controls">
+            <button id="clear-btn" onclick="clearCanvas()">Clear Canvas</button>
+        </div>
+
+        <div class="output-container">
+            <div id="output">Loading model...</div>
+        </div>
+    </div>
+
+    <!-- TensorFlow.js Scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs@4.10.0/dist/tf.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
