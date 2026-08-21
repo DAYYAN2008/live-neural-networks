@@ -35,24 +35,22 @@
             
             <!-- Interactive Demo -->
             <div>
-                <section class="content-section" style="display: flex; flex-direction: column; align-items: center;">
-                    <h2 style="width: 100%; text-align: center; border-bottom: none; margin-bottom: 1rem;">Demo</h2>
-                    <p class="text-base text-muted mb-8 text-center" style="max-width: 400px; line-height: 1.6;">
-                        Draw any single digit (0-9) in the box below.<br>
-                        The CNN runs directly in your browser.
+                <section class="content-section">
+                    <h2 style="border-bottom: none; margin-bottom: 0.5rem;">Demo</h2>
+                    <p class="text-base text-muted mb-8" style="line-height: 1.6;">
+                        Draw a digit (0-9) below to test the browser-based CNN.
                     </p>
                     
-                    <div class="canvas-wrapper">
-                        <!-- 280x280 is 10x the 28x28 MNIST resolution -->
-                        <canvas id="canvas" width="280" height="280"></canvas>
-                    </div>
-
-                    <div class="mt-6 w-full flex justify-center">
-                        <button id="clear-btn" class="btn btn-secondary" onclick="clearCanvas()">Clear Canvas</button>
-                    </div>
-
-                    <div class="mt-6 p-4 w-full text-center" style="background-color: var(--bg-color); border: 1px solid var(--border); border-radius: 6px;">
-                        <div id="output" class="font-mono text-lg text-accent">Loading model...</div>
+                    <div class="flex flex-col items-center gap-6">
+                        <div class="canvas-wrapper" style="box-shadow: 0 0 20px rgba(59, 130, 246, 0.15);">
+                            <canvas id="canvas" width="280" height="280"></canvas>
+                        </div>
+                        
+                        <button id="clear-btn" class="btn btn-secondary w-full" style="max-width: 280px;" onclick="clearCanvas()">Clear Canvas</button>
+                        
+                        <div class="flex items-center justify-center p-4 w-full" style="background-color: var(--bg-color); border: 1px solid var(--border); border-radius: 8px; max-width: 280px; min-height: 64px;">
+                            <div id="output" class="font-mono text-xl text-accent font-bold text-center">Loading...</div>
+                        </div>
                     </div>
                 </section>
             </div>

@@ -1,14 +1,14 @@
 /* css/main.css */
 :root {
-    --bg-color: #0d1117;
-    --card-bg: #161b22;
-    --card-hover: #1f242c;
-    --text-main: #c9d1d9;
-    --text-muted: #8b949e;
-    --accent: #58a6ff;
-    --accent-hover: #79c0ff;
-    --border: #30363d;
-    --success: #2ea043;
+    --bg-color: #030712;
+    --card-bg: #0b1120;
+    --card-hover: #111827;
+    --text-main: #f8fafc;
+    --text-muted: #94a3b8;
+    --accent: #3b82f6;
+    --accent-hover: #60a5fa;
+    --border: #1e293b;
+    --success: #10b981;
 }
 
 * {
@@ -59,6 +59,8 @@ a:hover {
 .font-medium { font-weight: 500; }
 .font-semibold { font-weight: 600; }
 .font-bold { font-weight: 700; }
+.uppercase { text-transform: uppercase; }
+.tracking-widest { letter-spacing: 0.1em; }
 
 .text-muted { color: var(--text-muted); }
 .text-main { color: var(--text-main); }
@@ -75,6 +77,9 @@ a:hover {
 .flex { display: flex; }
 .flex-col { flex-direction: column; }
 .items-center { align-items: center; }
+.justify-between { justify-content: space-between; }
+.justify-center { justify-content: center; }
+.w-full { width: 100%; }
 .justify-between { justify-content: space-between; }
 .justify-center { justify-content: center; }
 .gap-2 { gap: 0.5rem; }
@@ -99,6 +104,7 @@ a:hover {
 .grid-cols-1 { grid-template-columns: repeat(1, minmax(0, 1fr)); }
 @media (min-width: 768px) {
     .md\:grid-cols-2 { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+    .md\:flex-row { flex-direction: row; }
 }
 @media (min-width: 1024px) {
     .lg\:grid-cols-3 { grid-template-columns: repeat(3, minmax(0, 1fr)); }
