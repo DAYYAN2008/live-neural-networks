@@ -44,7 +44,7 @@
     border: 1px solid var(--border);
     border-radius: 8px;
     padding: 1.5rem;
-    transition: border-color 0.2s ease, transform 0.2s ease;
+    transition: border-color 0.2s ease;
     display: flex;
     flex-direction: column;
     height: 100%;
@@ -52,7 +52,6 @@
 
 .model-card:hover {
     border-color: var(--text-muted);
-    transform: translateY(-2px);
 }
 
 .model-card-header {

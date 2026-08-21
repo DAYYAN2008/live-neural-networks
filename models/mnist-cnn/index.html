@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>MNIST CNN | Model Lab</title>
+    <title>MNIST CNN | Dayyan's Lab</title>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <!-- Notice relative paths to root css -->
     <link rel="stylesheet" href="../../css/main.css">
@@ -12,7 +12,7 @@
 <body>
     <nav class="navbar">
         <div class="container">
-            <div class="font-bold text-lg">Model Lab</div>
+            <div class="font-bold text-lg">Dayyan's Lab</div>
             <div class="nav-links">
                 <a href="../../index.html" class="nav-link">&larr; Back to Lab</a>
             </div>
@@ -20,24 +20,27 @@
     </nav>
 
     <main class="container mt-12 mb-12 flex-col">
-        <header class="mb-8">
-            <div class="flex items-center gap-4 mb-2">
+        <header class="mb-8 flex flex-col items-center text-center">
+            <div class="flex justify-center items-center gap-4 mb-2">
                 <h1 class="text-3xl">MNIST CNN</h1>
                 <span class="tag">TensorFlow.js</span>
             </div>
             <p class="text-xl text-muted">Custom Convolutional Neural Network</p>
-            <div class="mt-4 flex gap-4 text-sm text-muted font-mono">
+            <div class="mt-4 flex justify-center gap-4 text-sm text-muted font-mono">
                 <span>98.6% Test Accuracy</span> &middot; <span>MNIST Dataset</span> &middot; <span>CV</span>
             </div>
         </header>
 
-        <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+        <div class="flex flex-col gap-8" style="max-width: 700px; margin: 0 auto; width: 100%;">
             
-            <!-- Left Column: Interactive Demo -->
+            <!-- Interactive Demo -->
             <div>
                 <section class="content-section" style="display: flex; flex-direction: column; align-items: center;">
-                    <h2>Interactive Demo</h2>
-                    <p class="text-sm text-muted mb-6 text-center">Draw any single digit (0-9) in the box below. The CNN runs directly in your browser.</p>
+                    <h2 style="width: 100%; text-align: center; border-bottom: none; margin-bottom: 1rem;">Demo</h2>
+                    <p class="text-base text-muted mb-8 text-center" style="max-width: 400px; line-height: 1.6;">
+                        Draw any single digit (0-9) in the box below.<br>
+                        The CNN runs directly in your browser.
+                    </p>
                     
                     <div class="canvas-wrapper">
                         <!-- 280x280 is 10x the 28x28 MNIST resolution -->
@@ -54,63 +57,7 @@
                 </section>
             </div>
 
-            <!-- Right Column: Specs & Learning -->
-            <div class="flex-col gap-6">
-                <section class="content-section">
-                    <h2>Architecture</h2>
-                    <div class="arch-visual text-left flex-col gap-2 p-4">
-                        <div>Input (28 × 28 × 1)</div>
-                        <div class="arrow">&darr;</div>
-                        <div>Conv2D (32 filters, 3x3, ReLU)</div>
-                        <div class="arrow">&darr;</div>
-                        <div>MaxPooling2D (2x2)</div>
-                        <div class="arrow">&darr;</div>
-                        <div>Conv2D (64 filters, 3x3, ReLU)</div>
-                        <div class="arrow">&darr;</div>
-                        <div>MaxPooling2D (2x2)</div>
-                        <div class="arrow">&darr;</div>
-                        <div>Flatten</div>
-                        <div class="arrow">&darr;</div>
-                        <div>Dense (64 units, ReLU)</div>
-                        <div class="arrow">&darr;</div>
-                        <div>Dense (10 units, Softmax)</div>
-                    </div>
-                </section>
-
-                <section class="content-section">
-                    <h2>Performance</h2>
-                    <div class="metrics-grid mt-4">
-                        <div class="metric-item">
-                            <span class="metric-label">Test Accuracy</span>
-                            <span class="metric-value">98.6%</span>
-                        </div>
-                        <div class="metric-item">
-                            <span class="metric-label">Dataset</span>
-                            <span class="metric-value">MNIST (60K Train, 10K Test)</span>
-                        </div>
-                        <div class="metric-item">
-                            <span class="metric-label">Optimizer</span>
-                            <span class="metric-value">Adam</span>
-                        </div>
-                        <div class="metric-item">
-                            <span class="metric-label">Loss</span>
-                            <span class="metric-value">Sparse Categorical Crossentropy</span>
-                        </div>
-                        <div class="metric-item">
-                            <span class="metric-label">Framework</span>
-                            <span class="metric-value">TensorFlow (Python) / TFJS (Browser)</span>
-                        </div>
-                    </div>
-                </section>
-
-                <section class="content-section">
-                    <h2>What I Learned</h2>
-                    <p class="text-sm text-muted">
-                        This model served as an exploration into standard convolutional feature extraction. I learned how spatial pooling reduces dimensionality while maintaining important features like edges and curves. Exporting the Keras model to <code>tfjs_model</code> and running inference client-side demonstrated the capability of edge-AI, ensuring low latency and privacy since no image data leaves the browser.
-                    </p>
-                </section>
             </div>
-
         </div>
     </main>
 
